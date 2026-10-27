@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanTing Chen 😊 人生更新日誌 (2022—2026)</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#F9F8F6',
+                            card: '#FFFFFF',
+                            text: '#2D3748',
+                            muted: '#718096',
+                            accent: '#F59E0B', // Warm Pikachu Yellow
+                            accentHover: '#D97706',
+                            sage: '#E2E8F0',
+                            sageDark: '#64748B',
+                            softYellow: '#FEF3C7',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F9F8F6;
+            color: #2D3748;
+            font-family: 'Noto Sans TC', Inter, sans-serif;
+        }
+
+        /* Glassmorphism navigation bar */
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(249, 248, 246, 0.85);
+        }
+
+        /* Fade in on scroll animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image hover zoom effect */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+
+        .img-zoom-container img {
+            transition: transform 0.5s ease;
+        }
+
+        .img-zoom-container:hover img {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-amber-200 selection:text-amber-900">
+
+    <!-- Sticky Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-40 nav-blur border-b border-stone-200/60 transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg tracking-tight text-stone-800 flex items-center gap-2">
+                <span>WanTing Chen</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-normal">2022—2026</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm text-stone-600 font-medium">
+                <a href="#ch1" class="hover:text-amber-600 transition-colors">01.旅行</a>
+                <a href="#ch2" class="hover:text-amber-600 transition-colors">02.職場</a>
+                <a href="#ch3" class="hover:text-amber-600 transition-colors">03.轉折</a>
+                <a href="#ch4" class="hover:text-amber-600 transition-colors">04.興趣</a>
+                <a href="#ch5" class="hover:text-amber-600 transition-colors">05.生活</a>
+            </nav>
+
+            <button id="mobileMenuBtn" class="md:hidden text-stone-600 p-2 focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 border-b border-stone-200 px-6 py-4 flex flex-col space-y-3 text-sm font-medium text-stone-700">
+            <a href="#ch1" class="mobile-nav-link py-1 hover:text-amber-600">01. 2024 · 旅行篇</a>
+            <a href="#ch2" class="mobile-nav-link py-1 hover:text-amber-600">02. 2025 · 職場篇</a>
+            <a href="#ch3" class="mobile-nav-link py-1 hover:text-amber-600">03. 2026 · 職涯轉換篇</a>
+            <a href="#ch4" class="mobile-nav-link py-1 hover:text-amber-600">04. 興趣篇</a>
+            <a href="#ch5" class="mobile-nav-link py-1 hover:text-amber-600">05. 現在 · 生活篇</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-16 space-y-20 w-full">
+
+        <!-- HERO SECTION -->
+        <section class="fade-in-up text-center sm:text-left py-6 sm:py-10 border-b border-stone-200/80">
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center">
+                <div class="sm:col-span-7 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                        人生更新日誌 / 2022—2026
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-800 leading-tight">
+                        WanTing Chen 😊
+                    </h1>
+                    <p class="text-xl sm:text-2xl font-medium text-amber-700">
+                        「工作快八年，決定先逃離一下。」
+                    </p>
+                    <p class="text-stone-600 text-base leading-relaxed max-w-xl">
+                        人生第一次大型暫停：把煩惱從工作換成今天去哪玩。歡迎來到我這幾年的生活紀錄與近況更新！
+                    </p>
+                </div>
+                
+                <div class="sm:col-span-5 flex justify-center">
+                    <div class="relative group cursor-pointer" onclick="openLightbox('input_file_4.png', 'WanTing & Friends 開心生活照')">
+                        <div class="w-52 h-64 sm:w-60 sm:h-72 rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-amber-100 relative img-zoom-container">
+                            <img src="input_file_4.png" alt="WanTing & Friends" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-3 -right-2 bg-white text-stone-700 px-3 py-1.5 rounded-xl shadow-md border border-stone-100 text-xs font-medium flex items-center gap-1.5">
+                            <i class="fa-solid fa-face-smile text-amber-500 text-sm"></i> 開心的生活照 ✨
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 01: 2024 · 旅行篇 -->
+        <section id="ch1" class="fade-in-up space-y-6">
+            <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm font-bold tracking-wider text-amber-600 uppercase">01 / 05</span>
+                    <h2 class="text-2xl font-bold text-stone-800">2024 · 旅行篇（大型暫停）</h2>
+                </div>
+                <span class="text-xs bg-stone-200 text-stone-700 px-2.5 py-1 rounded-md font-mono">2024</span>
+            </div>
+
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-stone-200/70 space-y-5">
+                <p class="text-stone-700 text-base leading-relaxed">
+                    資訊軟體業近八年留職停薪，跟著大白去紐西蘭、南美回來之後：<br>
+                    <span class="font-semibold text-stone-900 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">「嗯，不然就離職吧。」</span>
+                </p>
+                
+                <div class="p-4 bg-stone-50 rounded-xl border-l-4 border-amber-400 text-stone-600 text-sm italic">
+                    「換工作要跟同事自我介紹的時候我都放這張😆」
+                </div>
+
+                <!-- Primary Slide Photo: Pikachu Collage -->
+                <div class="pt-2">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wider">皮卡丘環遊世界 IG 拼貼足跡</h3>
+                        <span class="text-xs text-amber-600 font-medium"><i class="fa-solid fa-expand mr-1"></i>點擊觀看大圖</span>
+                    </div>
+                    
+                    <div class="img-zoom-container rounded-2xl overflow-hidden shadow-md border border-stone-200/80 cursor-pointer bg-stone-100 relative group"
+                         onclick="openLightbox('input_file_0.png', '2024 旅行篇 - 皮卡丘環遊世界 IG 九宮格')">
+                        <img src="input_file_0.png" alt="Pikachu Travel Collage" class="w-full h-auto object-cover max-h-[600px]">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="px-4 py-2 bg-white/90 text-stone-800 rounded-full text-xs font-semibold shadow-lg">
+                                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 點擊查看南美與紐西蘭完整九宮格
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 02: 2025 · 職場篇 -->
+        <section id="ch2" class="fade-in-up space-y-6">
+            <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm font-bold tracking-wider text-amber-600 uppercase">02 / 05</span>
+                    <h2 class="text-2xl font-bold text-stone-800">2025 · 職場篇（假很多的外商）</h2>
+                </div>
+                <span class="text-xs bg-stone-200 text-stone-700 px-2.5 py-1 rounded-md font-mono">2025</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200/70 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-stone-800">「假很多的外商，還是留不住我。」</h3>
+                        <ul class="space-y-3 text-stone-600 text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1 flex-shrink-0"></i>
+                                <span><strong>福利不錯，假也很多？</strong><br>福利與假期的確很優渥。</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-rotate-right text-amber-500 mt-1 flex-shrink-0"></i>
+                                <span><strong>主管與制度：</strong>這個嘛……很微妙 → 最後離職，跟著大白去冰島。</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-compass text-sky-500 mt-1 flex-shrink-0"></i>
+                                <span>真的很彈性，但想像不到待在這裡三年後會怎麼樣。</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 text-white font-medium text-sm shadow-sm hover:opacity-95 transition-all">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        太辛苦找照片了，請看大白 IG ❄️
+                    </a>
+                </div>
+
+                <div class="bg-amber-50/70 p-6 rounded-2xl border border-amber-200/80 flex flex-col justify-center items-center text-center space-y-4">
+                    <div class="w-16 h-16 rounded-full bg-amber-200/80 flex items-center justify-center text-amber-700 text-2xl shadow-inner">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h4 class="font-bold text-stone-800 text-lg">冰島追光與彈性哲學</h4>
+                    <p class="text-stone-600 text-sm max-w-xs leading-relaxed">
+                        與其留在不確定裡，不如將時間交給壯麗的自然景緻。選擇離職，讓生活有更多可能。
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-center pt-2">
+                        <span class="text-xs px-3 py-1 bg-white rounded-full text-stone-600 border border-amber-200 shadow-sm">#冰島極光</span>
+                        <span class="text-xs px-3 py-1 bg-white rounded-full text-stone-600 border border-amber-200 shadow-sm">#勇敢告別</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 03: 2026 · 職涯轉換篇 -->
+        <section id="ch3" class="fade-in-up space-y-6">
+            <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm font-bold tracking-wider text-amber-600 uppercase">03 / 05</span>
+                    <h2 class="text-2xl font-bold text-stone-800">2026 · 職涯轉換篇（回到通勤）</h2>
+                </div>
+                <span class="text-xs bg-stone-200 text-stone-700 px-2.5 py-1 rounded-md font-mono">2026</span>
+            </div>
+
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-stone-200/70 space-y-6">
+                <h3 class="text-xl font-bold text-stone-800">「從全遠端到金融業：我又開始塞在路上了。」</h3>
+
+                <!-- Career Timeline Comparison -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200/80 space-y-1.5">
+                        <span class="text-xs font-semibold uppercase text-stone-400">Previous Role</span>
+                        <h4 class="font-bold text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-laptop-house text-indigo-500"></i> 上一份工作
+                        </h4>
+                        <p class="text-sm text-stone-600">製造業人資部門 · 全遠端</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-amber-50/80 border border-amber-200/80 space-y-1.5">
+                        <span class="text-xs font-semibold uppercase text-amber-600">Current Role</span>
+                        <h4 class="font-bold text-stone-800 flex items-center gap-2">
+                            <i class="fa-solid fa-building-columns text-amber-600"></i> 現在工作
+                        </h4>
+                        <p class="text-sm text-stone-800 font-medium">金融業 · 通勤上班族 🚃</p>
+                    </div>
+                </div>
+
+                <!-- Golden Quote Box -->
+                <div class="p-6 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-md space-y-2">
+                    <i class="fa-solid fa-quote-left text-2xl opacity-50"></i>
+                    <p class="text-lg sm:text-xl font-medium leading-relaxed">
+                        「通勤很煩，但離開前主管真的很快樂。<br class="hidden sm:inline">幸福不是不用上班，是不用再跟不適合的人一起上班。」
+                    </p>
+                </div>
+
+                <!-- Carrefour Voucher Photo -->
+                <div class="pt-2">
+                    <div class="flex flex-col sm:flex-row items-center gap-5 p-4 sm:p-5 rounded-2xl bg-stone-50 border border-stone-200/80">
+                        <div class="w-full sm:w-48 h-56 rounded-xl overflow-hidden flex-shrink-0 bg-stone-200 cursor-pointer shadow-sm img-zoom-container" onclick="openLightbox('input_file_1.png', '離職領禮券紀念：回前公司領中秋家樂福提貨券')">
+                            <img src="input_file_1.png" alt="Carrefour Voucher" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-2 text-center sm:text-left">
+                            <div class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-xs rounded-md font-semibold">離職彩蛋 🛒</div>
+                            <h4 class="font-bold text-stone-800 text-base">驚喜的離職句點！</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                「沒想到中秋節前離職，還可以回前公司領到中秋禮券！」這張家樂福提貨券也是個值得紀念的小美好。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 04: 興趣篇 -->
+        <section id="ch4" class="fade-in-up space-y-6">
+            <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm font-bold tracking-wider text-amber-600 uppercase">04 / 05</span>
+                    <h2 class="text-2xl font-bold text-stone-800">興趣篇（讓壓力有出口）</h2>
+                </div>
+                <span class="text-xs bg-stone-200 text-stone-700 px-2.5 py-1 rounded-md font-mono">SPORTS</span>
+            </div>
+
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-stone-200/70 space-y-6">
+                <p class="text-stone-700 text-base leading-relaxed">
+                    釋放壓力和脂肪所以運動，後來開始挑戰極限！
+                </p>
+
+                <!-- Achievement Stats Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-1">
+                        <div class="text-2xl mb-1">🏃‍♀️</div>
+                        <div class="text-xs text-stone-500 font-medium">跑步累積</div>
+                        <div class="font-bold text-stone-800 text-sm">一年半 ｜ 最遠 10K</div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-1">
+                        <div class="text-2xl mb-1">⏱️</div>
+                        <div class="text-xs text-stone-500 font-medium">個人最佳</div>
+                        <div class="font-bold text-stone-800 text-sm">最快 5km 30分鐘</div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-center space-y-1 col-span-2 sm:col-span-1">
+                        <div class="text-2xl mb-1">🎯</div>
+                        <div class="text-xs text-amber-700 font-medium">NEXT CHALLENGE</div>
+                        <div class="font-bold text-amber-900 text-sm">挑戰半馬！🥊</div>
+                    </div>
+                </div>
+
+                <!-- Muay Thai Cat Photo Slide 4 -->
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider">泰拳練習場邊視角</span>
+                        <span class="text-xs text-amber-600"><i class="fa-solid fa-expand mr-1"></i>點擊觀看大圖</span>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border border-stone-200 cursor-pointer group h-72 sm:h-96 bg-stone-100 img-zoom-container" onclick="openLightbox('input_file_2.png', '泰拳館場邊監督的貓咪')">
+                        <img src="input_file_2.png" alt="Muay Thai Gym Cat" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent p-6 flex flex-col justify-end">
+                            <span class="text-amber-300 text-xs font-semibold uppercase tracking-wider">Muay Thai & Cat Mascot</span>
+                            <h4 class="text-white font-bold text-lg">泰拳館場邊的「三花貓監督員」🐱</h4>
+                            <p class="text-stone-300 text-xs mt-1">練習揮拳打壓力的同時，還有場邊的貓貓全程陪伴！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 05: 現在 · 生活篇 -->
+        <section id="ch5" class="fade-in-up space-y-6">
+            <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm font-bold tracking-wider text-amber-600 uppercase">05 / 05</span>
+                    <h2 class="text-2xl font-bold text-stone-800">現在 · 生活篇（好好過日子）</h2>
+                </div>
+                <span class="text-xs bg-stone-200 text-stone-700 px-2.5 py-1 rounded-md font-mono">TODAY</span>
+            </div>
+
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-stone-200/70 space-y-6">
+                <h3 class="text-xl font-bold text-stone-800">「人生待辦清單：半馬、鋼琴，還有好好過日子。」</h3>
+
+                <div class="space-y-3">
+                    <div class="flex items-center p-3.5 rounded-xl bg-stone-50 border border-stone-200/70 gap-3">
+                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xs">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-stone-700 text-sm font-medium">✓ 一起散步、逛夜市、假日出遊</span>
+                    </div>
+
+                    <div class="flex items-center p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/80 gap-3">
+                        <div class="w-6 h-6 rounded-full bg-amber-200 text-amber-800 flex items-center justify-center flex-shrink-0 text-xs font-bold">
+                            ＋
+                        </div>
+                        <span class="text-stone-800 text-sm font-medium">下一個新手村：鋼琴課 🎹</span>
+                    </div>
+
+                    <div class="flex items-center p-3.5 rounded-xl bg-stone-50 border border-stone-200/70 gap-3">
+                        <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 text-xs">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <span class="text-stone-700 text-sm font-medium">→ 工作要做好，生活也要好好玩</span>
+                    </div>
+                </div>
+
+                <!-- Slide 5 Photos Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <!-- Pokegenic Photo -->
+                    <div class="rounded-2xl border border-stone-200 bg-stone-50 p-3 space-y-2">
+                        <div class="h-48 sm:h-56 rounded-xl overflow-hidden cursor-pointer img-zoom-container" onclick="openLightbox('input_file_3.png', 'POKÉGENIC 塗鴉牆打卡照')">
+                            <img src="input_file_3.png" alt="Pokegenic" class="w-full h-full object-cover">
+                        </div>
+                        <div class="px-1">
+                            <h4 class="font-bold text-stone-800 text-sm">POKÉGENIC 塗鴉牆打卡 ⚡</h4>
+                            <p class="text-stone-500 text-xs">最有生活感的街頭採點照片</p>
+                        </div>
+                    </div>
+
+                    <!-- Fat Pikachu Photo -->
+                    <div class="rounded-2xl border border-amber-200 bg-amber-50/60 p-3 space-y-2">
+                        <div class="h-48 sm:h-56 rounded-xl overflow-hidden cursor-pointer img-zoom-container" onclick="openLightbox('input_file_5.png', '最近購入的巨型胖皮卡丘戰利品')">
+                            <img src="input_file_5.png" alt="Fat Pikachu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="px-1">
+                            <h4 class="font-bold text-amber-950 text-sm">最近購入的胖皮！大快樂 💛</h4>
+                            <p class="text-stone-600 text-xs">滿滿包裝帶回家的超療癒戰利品</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER & GUESTBOOK -->
+        <section class="fade-in-up bg-stone-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl space-y-8">
+            <div class="text-center space-y-3 max-w-md mx-auto">
+                <span class="text-xs font-semibold tracking-widest text-amber-400 uppercase">INTERACTION</span>
+                <h3 class="text-2xl font-bold">為 WanTing 的新篇章加油！</h3>
+                <p class="text-stone-400 text-sm">
+                    感謝你花時間觀看這份日誌，點擊按鈕給個鼓勵，或留下一句話給主揪吧！
+                </p>
+            </div>
+
+            <!-- Cheer Button -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <button id="cheerBtn" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-stone-900 font-bold text-lg shadow-lg hover:brightness-110 active:scale-95 transition-all">
+                    <i class="fa-solid fa-heart text-red-600 group-hover:scale-125 transition-transform"></i>
+                    <span>給 WanTing 一個 Encouragement!</span>
+                    <span id="cheerCounter" class="bg-stone-900/20 text-stone-900 px-2.5 py-0.5 rounded-full text-sm font-extrabold">24</span>
+                </button>
+                <span id="cheerFeedback" class="text-xs text-amber-300 h-4 opacity-0 transition-opacity">感謝你的祝福！🎉</span>
+            </div>
+
+            <!-- Mini Guestbook -->
+            <div class="max-w-lg mx-auto pt-4 border-t border-stone-800 space-y-4">
+                <h4 class="text-sm font-semibold text-stone-300 text-center">朋友打招呼留言板</h4>
+                
+                <form id="messageForm" class="space-y-3">
+                    <div class="flex gap-2">
+                        <input type="text" id="guestName" placeholder="你的名字/暱稱" required class="w-1/3 px-3 py-2 bg-stone-800 border border-stone-700 rounded-xl text-xs text-white focus:outline-none focus:border-amber-400">
+                        <input type="text" id="guestMsg" placeholder="留言或貼個 Emoji..." required class="w-2/3 px-3 py-2 bg-stone-800 border border-stone-700 rounded-xl text-xs text-white focus:outline-none focus:border-amber-400">
+                    </div>
+                    <button type="submit" class="w-full py-2 bg-stone-800 hover:bg-stone-700 border border-stone-700 text-amber-300 text-xs font-semibold rounded-xl transition-colors">
+                        送出留言 ✨
+                    </button>
+                </form>
+
+                <div id="messagesList" class="space-y-2 pt-2 max-h-48 overflow-y-auto pr-1">
+                    <div class="p-3 bg-stone-800/60 rounded-xl text-xs space-y-1">
+                        <div class="flex justify-between text-stone-400">
+                            <span class="font-semibold text-amber-300">大白 🥑</span>
+                            <span>剛剛</span>
+                        </div>
+                        <p class="text-stone-300">半馬加油！下次再一起出國玩 🏔️</p>
+                    </div>
+                    <div class="p-3 bg-stone-800/60 rounded-xl text-xs space-y-1">
+                        <div class="flex justify-between text-stone-400">
+                            <span class="font-semibold text-amber-300">前同事阿傑 ☕</span>
+                            <span>1小時前</span>
+                        </div>
+                        <p class="text-stone-300">太酷的一頁式！恭喜脫離前主管，祝金融業一切順利～</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center text-xs text-stone-500 pt-4 border-t border-stone-800/50">
+                WanTing Chen © 2022—2026 Life Update Journal. All rights reserved.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden flex-col justify-center items-center p-4 backdrop-blur-sm transition-opacity duration-300">
+        <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white text-3xl hover:text-amber-400 transition-colors focus:outline-none z-10" aria-label="Close Lightbox">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-3xl max-h-[85vh] overflow-hidden rounded-2xl shadow-2xl relative">
+            <img id="lightboxImg" src="" alt="Enlarged preview" class="w-full h-full object-contain max-h-[80vh]">
+        </div>
+        <p id="lightboxCaption" class="text-stone-300 text-sm mt-4 font-medium text-center"></p>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- 2. Lightbox Modal ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(src, caption) {
+            lightboxImg.src = src;
+            lightboxCaption.textContent = caption || '';
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // --- 3. Scroll Fade-in Observer ---
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // --- 4. Interactive Cheer Counter & Confetti ---
+        const cheerBtn = document.getElementById('cheerBtn');
+        const cheerCounter = document.getElementById('cheerCounter');
+        const cheerFeedback = document.getElementById('cheerFeedback');
+        let count = 24;
+
+        cheerBtn.addEventListener('click', () => {
+            count++;
+            cheerCounter.textContent = count;
+
+            confetti({
+                particleCount: 80,
+                spread: 70,
+                origin: { y: 0.8 },
+                colors: ['#F59E0B', '#FBBF24', '#EF4444', '#10B981']
+            });
+
+            cheerFeedback.classList.remove('opacity-0');
+            setTimeout(() => {
+                cheerFeedback.classList.add('opacity-0');
+            }, 2500);
+        });
+
+        // --- 5. Message Board ---
+        const messageForm = document.getElementById('messageForm');
+        const messagesList = document.getElementById('messagesList');
+
+        messageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('guestName').value.trim();
+            const msg = document.getElementById('guestMsg').value.trim();
+
+            if (name && msg) {
+                const newMsgCard = document.createElement('div');
+                newMsgCard.className = 'p-3 bg-stone-800/60 rounded-xl text-xs space-y-1 fade-in-up visible';
+                newMsgCard.innerHTML = `
+                    <div class="flex justify-between text-stone-400">
+                        <span class="font-semibold text-amber-300">${escapeHtml(name)} ✨</span>
+                        <span>剛剛</span>
+                    </div>
+                    <p class="text-stone-300">${escapeHtml(msg)}</p>
+                `;
+
+                messagesList.prepend(newMsgCard);
+                messageForm.reset();
+
+                confetti({
+                    particleCount: 30,
+                    spread: 40,
+                    origin: { y: 0.9 }
+                });
+            }
+        });
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, function(m) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                }[m];
+            });
+        }
+    </script>
+</body>
+</html>
